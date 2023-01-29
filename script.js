@@ -4,18 +4,18 @@ document.getElementById("form").addEventListener("submit", function(event) {
     event.preventDefault();
     convert();
 });
-// função para converter binário para decimal
+/* função para converter binário para decimal */
 function convert() {
-// obtém o valor do campo de entrada
+/* obtém o valor do campo de entrada */
 var binary = document.getElementById("binary").value;
-// verifica se o valor é válido (apenas 0 e 1)
+/* verifica se o valor é válido (apenas 0 e 1) */
 var valid = /^[0-1]+$/.test(binary);
 if (!valid) {
     alert("Insira apenas 0 e 1!");
     return;
 }
-// calcula o equivalente decimal
+/* calcula o equivalente decimal */
 var decimal = parseInt(binary, 2);
-// exibe o resultado
+/* exibe o resultado */
 document.querySelector(".output").innerHTML = "O equivalente decimal é: " + decimal;
 }
